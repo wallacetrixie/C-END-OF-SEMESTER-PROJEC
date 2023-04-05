@@ -85,7 +85,7 @@ int main()
         printf("Choose 2 for viewing sample accounts:\n");
         printf("Chose 3 for generating passwords:\n");
         printf("Chose 4 for creating a user account:\n");      ///prints menu option
-        printf("Chose 5 for user authentication:\n");
+        printf("Chose 5 for user account authentication:\n");
         printf("Enter your choice:");
         scanf("%d", &choice);
         getchar(); /// consume the newline character left in the input buffer
