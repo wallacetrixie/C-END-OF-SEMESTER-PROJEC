@@ -2,7 +2,7 @@
 #include<string.h>  /// include string manipulation library
 #include<time.h>    /// include time library
 #include<stdlib.h> /// include standard library
-#include<ctype.h>   
+#include<ctype.h>   /// Header file that provides functions for testing and mapping characters
 #define PASSWORD "wallacetrixie17112"
 #define USERNAME "Trixie"
 struct details
