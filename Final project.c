@@ -2,7 +2,7 @@
 #include<string.h>  /// include string manipulation library
 #include<time.h>    /// include time library
 #include<stdlib.h> /// include standard library
-#include<ctype.h>   /// Header file that provides functions for testing and mapping characters
+#include<ctype.h>   /// library contains functions  prototype for string manipulation for testing and mapping characters
 #define PASSWORD "wallacetrixie17112"
 #define USERNAME "Trixie"
 struct details
@@ -84,7 +84,7 @@ int main()
         printf("Choose 1 for encryption and decryption:\n");
         printf("Choose 2 for viewing sample accounts:\n");
         printf("Chose 3 for generating passwords:\n");
-        printf("Chose 4 for creating a user account:\n");       ///prints menu option
+        printf("Chose 4 for creating a user account:\n");      ///prints menu option
         printf("Chose 5 for user authentication:\n");
         printf("Enter your choice:");
         scanf("%d", &choice);
@@ -141,7 +141,28 @@ int main()
                 printf("Sample account is: %s\n", account3.name); ///prints sample user accounts
                 printf("Sample account is: %s\n", account4.name);
                 printf("Sample account is:%s\n",account5.name);
-                break;
+                
+                ///Open a file named "sample_accounts.txt" in read mode
+                
+                 FILE *fp;
+                 fp = fopen("sample_accounts.txt", "r");
+                 
+                /// If the file doesn't exist, print an error message and return 0
+                 if(fp == NULL)
+            {
+                 printf("Failed to create file\n");
+                 return 0;
+            }
+                        /// Write the names of 5 sample accounts to the file using fprintf()
+                         fprintf(fp, "Sample account is: %s\n", account1.name);
+                         fprintf(fp, "Sample account is: %s\n", account2.name);
+                         fprintf(fp, "Sample account is: %s\n", account3.name);
+                         fprintf(fp, "Sample account is: %s\n", account4.name);
+                         fprintf(fp, "Sample account is: %s\n", account5.name);
+                         fclose(fp);
+                        printf("Sample accounts saved to file 'sample accounts.txt'\n");
+
+                  break;
 
             }
 
