@@ -3,7 +3,7 @@
 #include<time.h>    /// include time library
 #include<stdlib.h> /// include standard library
 #include<ctype.h>   /// library contains functions  prototype for string manipulation for testing and mapping characters
-#define PASSWORD "wallacetrixie17112"
+#define PASSWORD "tgdrrf6##$__56-:$4"
 #define USERNAME "Trixie"
 struct details
 {
